@@ -1,0 +1,24 @@
+p{
+color:Black;
+text-align:center;
+text-transform:capitalize;
+text-decoration:underline;
+}
+div{
+	display:inline-block;
+	width:100px;
+	height:100px;
+}
+
+a:active{
+	color:green;
+}
+a:visited{
+	color:purple;
+}
+a:hover{
+	color:red;
+}
+a{
+	text-align:right;
+}
