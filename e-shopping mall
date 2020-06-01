@@ -1,0 +1,318 @@
+FOR LOGIN PAGE:
+
+String a = jTextField1.getText();
+         new User_login().setVisible(true);
+new Create_account().setVisible(true);
+--------------------------------------------------------------------------------------------------------------
+FOR CREATE ACCOUNT PAGE:
+
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import javax.swing.JOptionPane;
+String name = jTextField1.getText();
+        String phoneno = jTextField2.getText();
+        String email = jTextField3.getText();
+        String password = jTextField4.getText();
+        try
+        { Class.forName("java.sql.DriverManager");
+          Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+          Statement stmt = (Statement)con.createStatement();
+          String query = "INSERT INTO customer VALUES('"+name+"','"+phoneno+"','"+email+"','"+password+"');";
+          stmt.executeUpdate(query);
+        }
+        catch(Exception e)
+        { JOptionPane.showMessageDialog(this,e.getMessage());
+
+        }
+         new User_login().setVisible(true);
+         JOptionpane.showMessageDialog(this,"your account has been created");
+---------------------------------------------------------------------------------------------------------------------------------
+FOR HOMEPAGE:
+
+new SHIRT().setVisible(true);
+new PANTS().setVisible(true);
+new MOBILE().setVisible(true);
+new ACCESSORIES().setVisible(true);
+
+FOR FASHION PLANET:
+FOR CALCULATE BUTTON:
+int a = Integer.parseInt(jTextField2.getText());
+        if(jRadioButton1.isSelected());
+        { double b = (a*1000);
+          double e = (b*0.30);
+          double f = (b-e);
+          jTextField4.setText("" + f);
+        }
+        if(jRadioButton2.isSelected());
+        { double c = (int)(a*2000);
+          double g = c*0.35;
+          double h = c-g;
+          jTextField4.setText("" +h);
+        }
+        if(jRadioButton3.isSelected());
+        { double d = (int)(a*2500);
+          double i = d*0.45;	
+          double j = d-i;
+          jTextField4.setText("" +j);
+        }
+        jTextField4.setEditable(false);
+        jTextField3.setEditable(false);
+--------------------------------------------------------------------------------------------------------------------------------------
+FOR ADD TO CART BUTTON:
+
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import javax.swing.JOptionPane;
+if(jRadioButton1.isSelected());
+        jTextField3.setText("30%");
+if(jRadioButton2.isSelected());
+        jTextField3.setText("35%");
+if(jRadioButton3.isSelected());
+        jTextField3.setText("45%");
+String name = jTextField5.getText();
+        String qty = jTextField2.getText();
+        String amount = jTextField4.getText();
+        try
+        { Class.forName("java.sql.DriverManager");
+          Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+          Statement stmt = (Statement)con.createStatement();
+          String query = "INSERT INTO bill VALUES('"+name+"','"+qty+"','"+amount+"');";
+          stmt.executeUpdate(query);
+        }
+        catch(Exception e)
+        { JOptionPane.showMessageDialog(this,e.getMessage());
+
+        }
+------------------------------------------------------------------------------------------------------------------------------------        
+FOR BUY BUTTON:
+
+new Billing_page().setVisible(true);
+-----------------------------------------------------------------------------------------------------------------------------------
+FOR HOMEPAGE BUTTON:
+
+new User_login().setVisible(true);
+------------------------------------------------------------------------------------------------------------------------------------
+FOR PANTALOONS:
+FOR CALCULATE BUTTON:
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import javax.swing.JOptionPane;
+if(jRadioButton1.isSelected());
+        jTextField3.setText("20%");
+if(jRadioButton2.isSelected());
+        jTextField3.setText("25%");
+if(jRadioButton3.isSelected());
+        jTextField3.setText("35%");
+int a = Integer.parseInt(jTextField2.getText());
+        if(jRadioButton1.isSelected());
+        { double b = (a*2000);
+          double e = (b*0.20);
+          double f = (b-e);
+          jTextField4.setText("" + f);
+        }
+        if(jRadioButton2.isSelected());
+        { double c = (int)(a*1000);
+          double g = c*0.25;
+          double h = c-g;
+          jTextField4.setText("" +h);
+        }
+        if(jRadioButton3.isSelected());
+        { double d = (int)(a*3500);
+          double i = d*0.35;
+          double j = d-i;
+          jTextField4.setText("" +j);
+        }
+        jTextField4.setEditable(false);
+        jTextField3.setEditable(false);
+---------------------------------------------------------------------------------------------------------------------------------
+FOR ADD TO CART BUTTON:
+String name = jTextField5.getText();
+        String qty = jTextField2.getText();
+        String amount = jTextField4.getText();
+        try
+        { Class.forName("java.sql.DriverManager");
+          Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+          Statement stmt = (Statement)con.createStatement();
+          String query = "INSERT INTO bill VALUES('"+name+"','"+qty+"','"+amount+"');";
+          stmt.executeUpdate(query);
+        }
+        catch(Exception e)
+        { JOptionPane.showMessageDialog(this,e.getMessage());
+
+        }
+
+FOR BUY BUTTON:
+new Billing_page().setVisible(true);
+
+FOR HOMEPAGE BUTTON:
+new User_login().setVisible(true);
+---------------------------------------------------------------------------------------------------------------------------
+FOR TALK STORE:
+FOR CALCULATE BUTTON:
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import javax.swing.JOptionPane;
+if(jRadioButton1.isSelected());
+        jTextField3.setText("20%");
+if(jRadioButton2.isSelected());
+        jTextField3.setText("25%");
+if(jRadioButton3.isSelected());
+        jTextField3.setText("35%");
+int a = Integer.parseInt(jTextField2.getText());
+        if(jRadioButton1.isSelected());
+        { double b = (a*40000);
+          double e = (b*0.20);
+          double f = (b-e);
+          jTextField4.setText("" + f);
+        }
+        if(jRadioButton2.isSelected());
+        { double c = (int)(a*15000);
+          double g = c*0.25;
+          double h = c-g;
+          jTextField4.setText("" +h);
+        }
+        if (jRadioButton3.isSelected());
+        { double d = (int)(a*35000);
+          double i = d*0.35;
+          double j = d-i;
+          jTextField4.setText("" +j);
+        }
+        jTextField4.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField1.setEditable(false);
+------------------------------------------------------------------------------------------------------------------------------------
+FOR ADD TO CART BUTTON:
+String name = jTextField5.getText();
+        String qty = jTextField2.getText();
+        String amount = jTextField4.getText();
+        try
+        { Class.forName("java.sql.DriverManager");
+          Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+          Statement stmt = (Statement)con.createStatement();
+          String query = "INSERT INTO bill VALUES('"+name+"','"+qty+"','"+amount+"');";
+          stmt.executeUpdate(query);
+        }
+        catch(Exception e)
+        { JOptionPane.showMessageDialog(this,e.getMessage());
+
+        }
+FOR BUY BUTTON:
+new Billing_page().setVisible(true);
+
+FOR HOMEPAGE BUTTON:
+new User_login().setVisible(true);
+-------------------------------------------------------------------------------------------------------------------------------------
+FOR ACCESSORIES STORE:
+FOR CLACULATE BUTTON:
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import javax.swing.JOptionPane;
+if(jRadioButton1.isSelected());
+        jTextField3.setText("10%");
+if(jRadioButton2.isSelected());
+        jTextField3.setText("15%");
+if(jRadioButton3.isSelected());
+        jTextField3.setText("NO DISCOUNT");
+int a = Integer.parseInt(jTextField2.getText());
+        if(jRadioButton1.isSelected());
+        { double b = (a*1000);
+          double e = (b*0.10);
+          double f = (b-e);
+          jTextField4.setText("" + f);
+        }
+        if(jRadioButton2.isSelected());
+        { double c = (int)(a*800);
+          double g = c*0.20;
+          double h = c-g;
+          jTextField4.setText("" +h);
+        }
+        if(jRadioButton3.isSelected());
+        { double d = (int)(a*100);
+
+
+          jTextField4.setText("" +d);
+        }
+        jTextField4.setEditable(false);
+        jTextField3.setEditable(false);
+
+FOR ADD TO CART BUTTON:
+String name = jTextField5.getText();
+        String qty = jTextField2.getText();
+        String amount = jTextField4.getText();
+        try
+        { Class.forName("java.sql.DriverManager");
+          Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+          Statement stmt = (Statement)con.createStatement();
+          String query = "INSERT INTO bill VALUES('"+name+"','"+qty+"','"+amount+"');";
+          stmt.executeUpdate(query);
+        }
+        catch(Exception e)
+        { JOptionPane.showMessageDialog(this,e.getMessage());
+
+        }
+
+FOR BUY BUTTON:
+new Billing_page().setVisible(true);
+
+FOR HOMEPAGE BUTTON:
+new User_login().setVisible(true);
+
+
+FOR BILLING PAGE:
+FOR OVERVIEW BUTTON:
+import javax.swing.JOptionPane;
+import java.sql.DriverManager;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import java.sql.ResultSet;
+String name = jTextField1.getText();
+       if(name.isEmpty())
+           JOptionPane.showMessageDialog(this,"name not entered");
+       else
+       {
+           try
+           { Class.forName("java.sql.DriverManager");
+             Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/prajish","root","");
+             Statement stmt = (Statement)con.createStatement();
+             String query = "SELECT sum(amount) from bill where name='"+name+"';";
+                 Statement stmt1 = (Statement)con.createStatement();
+            String query1 = "SELECT amount from bill where name='"+name+"';";
+             ResultSet rs = stmt.executeQuery(query);
+             ResultSet rm = stmt1.executeQuery(query1);
+             int Found=0;
+             while(rs.next())
+             { String amount = rs.getString("sum(amount)");
+                jTextField5.setText(amount);
+               Found++;
+
+             }
+             if(Found==0)
+             {  JOptionPane.showMessageDialog(this,"Sorry!! no such name in contact list");
+                
+             }
+             int Found1=0;
+           while(rm.next())
+            {  String a = rm.getString("amount");
+
+              jTextArea1.append("" + a +"\n" +"\n" +"\n");
+
+             Found1++;
+           }
+             
+           }
+           catch(Exception e)
+           {
+               JOptionPane.showMessageDialog(this,e.getMessage());
+           }
+
+
+
+       }
+
+FOR PAY BUTTON:
+JOptionPane.showMessageDialog(null,"your payment has been done. we hope you enjoyed your shopping. THANK YOU!!!");
